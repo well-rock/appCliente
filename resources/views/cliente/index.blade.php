@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Lista de Clientes</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    View de Lista de Clientes...
+
+                    @foreach($clientes as $cliente)
+
+                    <li>{{ $cliente->nome }}</li>
+
+                    @endforeach
+
                 </div>
             </div>
         </div>
