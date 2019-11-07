@@ -84,8 +84,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Bem-Vindo!
+                    Bem-Vindo
                 </div>
+
+                <div class="font-weight-normal">
+                    Sistema de gerenciamento de Clientes!
+                </div>
+
+                 <!-- <div class="title m-b-md">
+                    Sistema de gerenciamento de Clientes!!
+                </div> -->
 
                 <!-- <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>

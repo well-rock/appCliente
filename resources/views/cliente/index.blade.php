@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Lista de Clientes</div>
+                <!-- <div class="card-header">Lista de Clientes</div> -->
+                <ol class="breadcrumb card-header">
+                    <li class="breadcrumb-item active">Clientes</li>
+                </ol>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,7 +18,7 @@
                     @endif
 
                     <p>
-                        <a class="btn btn-outline-info" href="#">Adicionar</a>
+                        <a class="btn btn-outline-info" href="{{ route('cliente.adicionar') }}">Adicionar</a>
                     </p>
 
                     <table class="table table-bordered">
