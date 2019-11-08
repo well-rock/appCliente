@@ -24,3 +24,6 @@ Auth::routes();
 Route::get('/cliente', 'ClienteController@index')->name('cliente.index');
 Route::get('/cliente/adicionar', 'ClienteController@adicionar')->name('cliente.adicionar');
 Route::post('/cliente/salvar', 'ClienteController@salvar')->name('cliente.salvar');
+Route::get('/cliente/editar/{id}', 'ClienteController@editar')->name('cliente.editar');
+Route::put('/cliente/atualizar/{id}', 'ClienteController@atualizar')->name('cliente.atualizar');
+Route::get('/cliente/deletar/{id}', 'ClienteController@deletar')->name('cliente.deletar');

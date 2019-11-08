@@ -35,13 +35,13 @@
                             @foreach($clientes as $cliente)
 
                                 <tr>
-                                    <th scope="row">{{ $cliente->id_cliente }}</th>
+                                    <th scope="row">{{ $cliente->id }}</th>
                                     <td>{{ $cliente->nome }}</td>
                                     <td>{{ $cliente->email }}</td>
                                     <td>{{ $cliente->endereco}}</td>
                                     <td>
-                                        <a class="btn btn-outline-secondary" href="#">Editar</a>
-                                        <a class="btn btn-outline-danger" href="#">Deletar</a>
+                                        <a class="btn btn-outline-secondary" href="{{ route('cliente.editar', $cliente->id) }}">Editar</a>
+                                        <a class="btn btn-outline-danger" href="javascript:(confirm('Deletar esse registro?') ? {{ route('cliente.deletar', $cliente->id) }} : '')">Deletar</a>
                                     </td>
                                 </tr>
 
