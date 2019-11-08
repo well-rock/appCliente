@@ -38,8 +38,8 @@
                                     <td>{{ $telefone->titulo }}</td>
                                     <td>{{ $telefone->telefone }}</td>
                                     <td>
-                                        <a class="btn btn-outline-secondary" href="#">Editar</a>
-                                        <a class="btn btn-outline-danger" href="javascript:(confirm('Deletar esse registro?') ? window.location.href='#' : false)">Deletar</a>
+                                        <a class="btn btn-outline-secondary" href="{{ route('telefone.editar', $telefone->id) }}">Editar</a>
+                                        <a class="btn btn-outline-danger" href="javascript:(confirm('Deletar esse registro?') ? window.location.href='{{ route('telefone.deletar', $telefone->id) }}' : false)">Deletar</a>
                                     </td>
                                 </tr>
                             @endforeach
