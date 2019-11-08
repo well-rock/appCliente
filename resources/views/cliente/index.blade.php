@@ -41,7 +41,7 @@
                                     <td>{{ $cliente->endereco}}</td>
                                     <td>
                                         <a class="btn btn-outline-secondary" href="{{ route('cliente.editar', $cliente->id) }}">Editar</a>
-                                        <a class="btn btn-outline-danger" href="javascript:(confirm('Deletar esse registro?') ? {{ route('cliente.deletar', $cliente->id) }} : '')">Deletar</a>
+                                        <a class="btn btn-outline-danger" href="javascript:(confirm('Deletar esse registro?') ? window.location.href='{{ route('cliente.deletar', $cliente->id) }}' : false)">Deletar</a>
                                     </td>
                                 </tr>
 
