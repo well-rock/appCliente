@@ -29,3 +29,5 @@ Route::put('/cliente/atualizar/{id}', 'ClienteController@atualizar')->name('clie
 Route::get('/cliente/deletar/{id}', 'ClienteController@deletar')->name('cliente.deletar');
 
 Route::get('/cliente/detalhe/{id}', 'ClienteController@detalhe')->name('cliente.detalhe');
+Route::get('/telefone/adicionar/{id}', 'TelefoneController@adicionar')->name('telefone.adicionar');
+Route::post('/telefone/salvar/{id}', 'TelefoneController@salvar')->name('telefone.salvar');
