@@ -26,6 +26,12 @@ class ClienteController extends Controller
     	return view('cliente.adicionar');
     }
 
+    public function detalhe($id)
+    {
+    	$cliente = \App\Cliente::find($id);
+    	return view ('cliente.detalhe', compact('cliente'));
+    }
+
     public function salvar(Request $request)
     {
     	\App\Cliente::create($request->all());
@@ -82,5 +88,6 @@ class ClienteController extends Controller
     		]);
     	return redirect()->route('cliente.index');
     }
+
 
 }

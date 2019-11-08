@@ -18,7 +18,7 @@
                     @endif
 
                     <p>
-                        <a class="btn btn-outline-info" href="{{ route('cliente.adicionar') }}">Adicionar</a>
+                        <a class="btn btn-outline-primary" href="{{ route('cliente.adicionar') }}">Adicionar</a>
                     </p>
 
                     <table class="table table-bordered">
@@ -40,6 +40,7 @@
                                     <td>{{ $cliente->email }}</td>
                                     <td>{{ $cliente->endereco}}</td>
                                     <td>
+                                        <a class="btn btn-outline-info" href="{{ route('cliente.detalhe', $cliente->id) }}">Detalhe</a>
                                         <a class="btn btn-outline-secondary" href="{{ route('cliente.editar', $cliente->id) }}">Editar</a>
                                         <a class="btn btn-outline-danger" href="javascript:(confirm('Deletar esse registro?') ? window.location.href='{{ route('cliente.deletar', $cliente->id) }}' : false)">Deletar</a>
                                     </td>
