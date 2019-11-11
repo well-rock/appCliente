@@ -23,15 +23,30 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome" class="form-control" placeholder="Nome do Cliente">
+                             <input type="text" name="nome" class="form-control @if($errors->first('nome')) is-invalid @else is-valid @endif" value="{{ old('nome') }}" placeholder="Nome do Cliente" autocomplete="nome" autofocus>
+                            @if($errors->has('nome'))
+                                <span class="help-block" style="color: Red;">
+                                    <strong>{{ $errors->first('nome') }}</strong>
+                                </span>
+                            @endif
                         </div>
-                        <div class="form-group">
+                        <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                             <label for="email">E-mail</label>
-                            <input type="email" name="email" class="form-control" placeholder="E-mail do Cliente">
+                            <input type="email" name="email" class="form-control @if($errors->first('email')) is-invalid @else is-valid @endif" value="{{ old('email') }}" placeholder="E-mail do Cliente">                                 
+                            @if($errors->has('email'))
+                                <span class="help-block" style="color: Red;">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>                    
+                            @endif
                         </div>
-                        <div class="form-group">
+                        <div class="form-group {{ $errors->has('endereco') ? 'has-error' : '' }}">
                             <label for="endereco">Endereço</label>
-                            <input type="text" name="endereco" class="form-control" placeholder="Endereço do Cliente">
+                            <input type="text" name="endereco" class="form-control @if($errors->first('endereco')) is-invalid @else is-valid @endif" value="{{ old('endereco') }}" placeholder="Endereço do Cliente">
+                            @if($errors->has('endereco'))
+                                <span class="help-block" style="color: Red;">
+                                    <strong>{{ $errors->first('endereco') }}</strong>
+                                </span>
+                            @endif
                         </div>
                         <button class="btn btn-outline-success">Adicionar</button>
                     </form>
